@@ -11,7 +11,6 @@ class PhoneNumber
       "0000000000"
     else
       cleaned_num = @phone.gsub(/[\D]/,"")
-      "1234567890"
       cleaned_num
     end
   end
@@ -20,5 +19,5 @@ class PhoneNumber
   end
 end
 
-# a = PhoneNumber.new("")
-# p a.number
+a = PhoneNumber.new("2345")
+p a.number
