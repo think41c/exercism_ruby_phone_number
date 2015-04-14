@@ -23,7 +23,7 @@ class PhoneNumber
   end
 
   def check_length
-    if @phone.length < 20
+    if @phone.length == 10
       @phone
     else
       "0000000000"
