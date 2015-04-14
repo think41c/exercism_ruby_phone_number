@@ -5,7 +5,7 @@ class PhoneNumber
 
     
   def number
-    cleaned_num = @phone.gsub(/[()]/,"")
+    cleaned_num = @phone.gsub(/[\D]/,"")
     "1234567890"
     cleaned_num
   end
@@ -14,5 +14,5 @@ class PhoneNumber
   end
 end
 
-a = PhoneNumber.new("()123")
+a = PhoneNumber.new("()123---")
 p a.number
