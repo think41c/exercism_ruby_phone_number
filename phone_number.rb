@@ -34,10 +34,12 @@ class PhoneNumber
     delete_the_one
     reject_letters 
     clean_chars
+    area_code
     check_length
   end
 
   def area_code
+    area_code = "#{@phone[0]}#{@phone[1]}#{@phone[2]}"
   end
 end
 
