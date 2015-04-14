@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require_relative 'phone_number'
 
 class PhoneNumberTest < Minitest::Test
@@ -14,13 +15,11 @@ class PhoneNumberTest < Minitest::Test
   end
 
   def test_cleans_number_with_dots
-    skip
     number = PhoneNumber.new('456.123.7890').number
     assert_equal '4561237890', number
   end
 
   def test_invalid_with_letters_in_place_of_numbers
-    skip
     number = PhoneNumber.new('123-abc-1234').number
     assert_equal '0000000000', number
   end
