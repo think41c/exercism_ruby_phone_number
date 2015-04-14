@@ -39,8 +39,32 @@ class PhoneNumber
   end
 
   def area_code
-    area_code = "#{@phone[0]}#{@phone[1]}#{@phone[2]}"
+    @area_code = "#{@phone[0]}#{@phone[1]}#{@phone[2]}"
   end
+
+  def prefix
+    @prefix = []
+    @prefix << @phone[3]
+    @prefix << @phone[4]
+    @prefix << @phone[5]
+    @prefix = @prefix.join
+  end
+
+  def suffix
+    suffix = []
+    suffix << @phone[6]
+    suffix << @phone[7]
+    suffix << @phone[8]
+    suffix << @phone[9]
+    suffix = suffix.join 
+  end
+
+  def to_s
+    number
+    @phone = "(#{area_code}) #{prefix}-#{suffix}"
+    @phone
+  end
+
 end
 
 a = PhoneNumber.new("12334525")
