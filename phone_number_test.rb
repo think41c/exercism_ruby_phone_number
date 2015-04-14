@@ -9,7 +9,6 @@ class PhoneNumberTest < Minitest::Test
   end
 
   def test_cleans_a_different_number
-    skip
     number = PhoneNumber.new('(987) 654-3210').number
     assert_equal '9876543210', number
   end
