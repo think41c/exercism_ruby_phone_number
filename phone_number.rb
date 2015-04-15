@@ -48,10 +48,7 @@ class PhoneNumber
 
   def suffix
     suffix = []
-    suffix << @phone[6]
-    suffix << @phone[7]
-    suffix << @phone[8]
-    suffix << @phone[9]
+    suffix << @phone[6..9]
     suffix = suffix.join 
   end
 
