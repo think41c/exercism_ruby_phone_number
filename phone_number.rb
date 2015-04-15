@@ -37,7 +37,7 @@ class PhoneNumber
   end
 
   def area_code
-    @area_code = "#{@phone[0]}#{@phone[1]}#{@phone[2]}"
+    @area_code = "#{@phone[0..2]}"
   end
 
   def prefix
