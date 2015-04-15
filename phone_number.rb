@@ -58,6 +58,3 @@ class PhoneNumber
     @phone
   end
 end
-
-a = PhoneNumber.new("12334525")
-p a.number
