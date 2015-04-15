@@ -42,9 +42,7 @@ class PhoneNumber
 
   def prefix
     @prefix = []
-    @prefix << @phone[3]
-    @prefix << @phone[4]
-    @prefix << @phone[5]
+    @prefix << @phone[3..5]
     @prefix = @prefix.join
   end
 
