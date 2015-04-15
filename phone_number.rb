@@ -10,9 +10,7 @@ class PhoneNumber
   end
 
   def reject_letters
-    if @phone.each_char.any? do |x|
-        x =~ /[A-Z]/i
-      end
+    if @phone =~ /[A-Z]/i
       @phone = "0000000000"
       @phone
     end
@@ -64,7 +62,6 @@ class PhoneNumber
     @phone = "(#{area_code}) #{prefix}-#{suffix}"
     @phone
   end
-
 end
 
 a = PhoneNumber.new("12334525")
